@@ -4,9 +4,12 @@ This code creates a function called 'update_plot()' which requests the current b
 It uses the 'requests' library to make the HTTP request, and the 'matplotlib.pyplot' and 'matplotlib.animation' libraries to generate the graph. 
 """
 
+# Otimizando code
 import requests
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
+
+quotes = []
 
 # Cria uma função para atualizar os dados e gerar o gráfico
 def update_plot(num):
@@ -23,10 +26,8 @@ def update_plot(num):
   quotes.append(quote)
   
   # Atualiza o gráfico com as novas cotações
-  plt.plot(quotes)
-
-# Inicializa a lista de cotações
-quotes = []
+  ax.clear()
+  ax.plot(quotes)
 
 # Cria o gráfico e configura a atualização automática a cada 5 segundos
 fig, ax = plt.subplots()

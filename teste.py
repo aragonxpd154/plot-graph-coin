@@ -13,7 +13,7 @@ quotes = []
 
 # Cria uma função para atualizar os dados e gerar o gráfico
 def update_plot(num):
-  # Faz a solicitação HTTP para obter os dados
+  # Faz a solicitação HTTP para obter os dados do json
   response = requests.get('https://api.coindesk.com/v1/bpi/currentprice.json')
   
   # Obtém os dados em formato JSON
